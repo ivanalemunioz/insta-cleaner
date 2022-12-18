@@ -42,7 +42,19 @@ var start = async () => {
             if (unfollowButton.textContent === 'Remove') {
                 // Click unfollow button
                 unfollowButton.click();
-                
+
+                // Await pop up to appear
+                await new Promise(resolve => setTimeout(resolve, 200));
+
+                // Hide buttons
+                document.querySelector('._a9-z') && (document.querySelector('._a9-z').style.display = 'none');
+
+                // Change label
+                document.querySelector('._aacr') && (document.querySelector('._aacr').innerText = 'Removing follower');
+
+                // Change description
+                document.querySelector('div._aacl:nth-child(2)') && (document.querySelector('div._aacl:nth-child(2)').innerText = 'Be patient...');
+
                 // Await one minute
                 await new Promise(resolve => setTimeout(resolve, 60000));
                 
@@ -92,7 +104,6 @@ var start = async () => {
         }
     }
 }
-
 
 process.once('document-start', () => {
   console.log('main:document-start');
