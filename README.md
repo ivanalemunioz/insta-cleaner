@@ -1,7 +1,7 @@
 
 ### 💖 Hello!
 
-<p><b>With this app you are going to remove those followers that you don't follow back.</b></p>
+<p><b>With this app you are going to remove those followers that you don't follow back in Instagram.</b></p>
 
 <ol>
     <li>
